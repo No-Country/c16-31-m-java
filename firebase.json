@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "adoptame",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
