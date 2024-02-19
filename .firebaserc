@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nc-adoptame": {
+      "hosting": {
+        "adoptame": [
+          "nc-adoptame"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nc-adoptame"
+  }
+}
