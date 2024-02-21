@@ -1,0 +1,40 @@
+footer{
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-family: var(--font-family-primary);
+  font-size: .9em;
+  font-weight: 300;
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+        "tittle nav"
+        "copyright copyright";
+}
+
+footer div{
+  grid-area: tittle;
+  margin: 20px;
+}
+
+footer nav{
+  grid-area: nav;
+}
+
+footer nav ul{
+  list-style: none;
+}
+
+li a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li a:hover{
+  color: var(--color-primary);
+}
+
+footer > p{
+  grid-area: copyright;
+  text-align: center;
+}
