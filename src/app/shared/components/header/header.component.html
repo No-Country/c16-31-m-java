@@ -1,10 +1,30 @@
 <header>
   <img src="../../../../assets/tittle.png" alt="Logo de la app, adóptame, con una huella en vez de la o"/>
-  <ul>
-    <li>Inicio</li>
-    <li>Quienes somos</li>
-    <li>Adoptar</li>
-    <li>Registrarse</li>
-    <li>Iniciar sesión</li>
-  </ul>
+  <nav>
+    <button
+      [routerLink]="['/home']"
+      [ngClass]="{'btn-active':router.url === '/home'}">
+      Inicio
+    </button>
+    <button
+      [routerLink]="['/home/aboutUs']"
+      [ngClass]="{'btn-active':router.url === '/home/aboutUs'}">
+      Quienes somos
+    </button>
+    <button
+      [routerLink]="['/dashboard']"
+      [ngClass]="{'btn-active':router.url === '/dashboard'}">
+      Adoptar
+    </button>
+    <button
+      [routerLink]="['/home/register']"
+      [ngClass]="{'btn-active':router.url === '/home/register'}">
+      Registrarse
+    </button>
+    <button
+      [routerLink]="['/home/login']"
+      [ngClass]="{'btn-active':router.url === '/home/login'}">
+      Iniciar sesión
+    </button>
+  </nav>
 </header>
