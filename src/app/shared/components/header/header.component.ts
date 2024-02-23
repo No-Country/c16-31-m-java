@@ -10,4 +10,18 @@ export class HeaderComponent {
 
   constructor(public router: Router) {}
 
+  openModal() {
+    const modelDiv = document.getElementById('myModal')
+    if(modelDiv != null){
+      modelDiv.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    const modelDiv = document.getElementById('myModal')
+    if(modelDiv != null){
+      modelDiv.style.display = 'none';
+    }
+  }
+
 }

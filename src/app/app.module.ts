@@ -15,12 +15,15 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { LoginComponent } from './modules/home/components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     provideMessaging(() => getMessaging()),
     providePerformance(() => getPerformance()),
     provideStorage(() => getStorage()),
-    provideRemoteConfig(() => getRemoteConfig())
+    provideRemoteConfig(() => getRemoteConfig()),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ScreenTrackingService,
