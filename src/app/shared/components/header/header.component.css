@@ -62,6 +62,12 @@ header nav button:hover{
   width: 50%;
 }
 
+.modal-rigth button{
+  right: 0;
+  margin-left: 92%;
+  margin-top: 10px;
+}
+
 
 
 

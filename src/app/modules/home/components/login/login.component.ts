@@ -32,4 +32,16 @@ export class LoginComponent {
       });
   }
 
+  loginWithGoogle(){
+    this.authService.loginWithGoogle()
+      .then(res => {
+        console.log('Me autentifiqué :)');
+        console.log(res);
+
+      })
+      .catch(err => {
+        console.log('Errorrr');
+      })
+  }
+
 }
