@@ -1,0 +1,49 @@
+
+/* About Us */
+.aboutUs{
+    margin-top: 3%;
+   
+}
+
+.card {
+    border-color: transparent;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.teams {
+    margin-left: 12%;
+    height: 80%;
+}
+
+.historyTeams{
+    margin-left: 34%;
+    height: 70%; 
+}
+
+.activityOfTeams{
+    margin-left: 10%;
+    height: 85%;
+}
+
+
+
+.card-title {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: var(--font-family-primary);
+    text-transform: uppercase;
+}
+
+.card-text {
+    margin-left: 15%;
+    text-align: center;
+}
+
+.phrase{
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    color: var(--color-primary);
+}
