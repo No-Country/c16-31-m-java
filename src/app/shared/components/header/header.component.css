@@ -41,5 +41,33 @@ header nav button:hover{
   background-color: #01827B;
 }
 
+.modal-container{
+  display: flex;
+  background-color: var(--color-secondary);
+  width: 100%;
+}
+
+.modal-left{
+  width: 50%;
+  padding: -30px;
+}
+
+.modal-left img{
+  width: 100%;
+}
+
+.modal-rigth{
+  background-image: url("../../../../assets/backgroundModal.png");
+  background-position: center;
+  width: 50%;
+}
+
+.modal-rigth button{
+  right: 0;
+  margin-left: 92%;
+  margin-top: 10px;
+}
+
+
 
 
