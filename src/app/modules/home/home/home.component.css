@@ -13,7 +13,7 @@
 }
 
 h1.phrase {
-    font-size: 260%;
+    font-size: 200%;
 }
 
 .btns {
@@ -37,89 +37,53 @@ h1.phrase {
 }
 
 /* Information */
-.info{   
-    margin-left: 17%; 
-    width: 80%;
-}
-.animals{
-    width: 20%;
-    height: 10%;
-    margin-top: 8%;
-    vertical-align: middle;
+.card {
+    
+    border-color:transparent;
+    max-width: 70%;
+    margin-top: 4%;
+    margin-left: 15%;
 }
 
-.textBox {
-  display: inline-block;
-  text-align: center;
-  width: calc(100% - 200%);
-  margin-left: 22%;  
+.card-text {
+    margin-top: 15%;
+    margin-left: 12%;
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-size: 107%;
 }
 
+button.active, .buttonsAdop {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+}
 
 /* Activities */
 .titleA{
-    margin-top: 2%;
-    text-transform: uppercase;
-    font-family: var(--font-family-secondary);
     text-align: center;
+    font-family: var(--font-family-secondary);
+    margin-top: 5%;
 }
 
-/* Slider of Activity */
-.slider {
-    margin-left: 19%;
-    text-align: center;  
-    position: relative;
-    width: 60%;
-    overflow: hidden;
+.active {
+    background-color: var(--color-tertiary);
 }
 
-.images {
-    display: flex;
-    width: 100%;
-}
 
-.images img {
-    height: 400px;
-    width: 100%;
-    transition: all 0.15s ease;
-}
-
-.images input {
-    display: none;
-}
-
-.dots {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-}
-
-.dots label {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    border: solid var(--color-tertiary) 3px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    margin: 5px;
-}
-
-.dots label:hover {
+/* Animals in adoptions */
+.col {
     background-color: var(--color-secondary);
 }
 
-#donations:checked ~ .donations {
-    margin-left: 0;
+span.carousel-control-prev-icon {
+    background-color: var(--color-primary);
+    margin-left: -62%;
+ }
+
+span.carousel-control-next-icon {
+   background-color: var(--color-primary);
+   margin-left: 62%;
 }
-
-#voluntary:checked ~ .voluntary {
-    margin-left: -100%;
-}
-
-#temporaryHouse:checked ~ .temporaryHouse {
-    margin-left: -200%;
-}
-
-
-
 
