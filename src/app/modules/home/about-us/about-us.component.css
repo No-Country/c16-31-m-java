@@ -1,16 +1,22 @@
 
 /* About Us */
+main {
+    background-image: url('../../../../assets/backgroundModal.png');
+}
+
 .aboutUs{
     margin-top: 3%;
    
 }
 
 .card {
+    background-color: transparent;
     border-color: transparent;
 }
 
 .card-body{
-    text-align: center;
+  text-align: center;
+  width: 83%;
 }
 
 .teams {
@@ -25,12 +31,14 @@
 
 .activityOfTeams{
     margin-left: 10%;
-    height: 85%;
+    height: 62%;
+    width: 100%;
 }
 
 
 
 .card-title {
+    margin-top: -5%;
     font-size: 27px;
     font-weight: bold;
     font-family: var(--font-family-primary);

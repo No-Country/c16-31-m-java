@@ -1,5 +1,9 @@
 
 /* Pront Page */
+main {
+    background-image: url('../../../../assets/backgroundModal.png');
+}
+
 .frontPage{
     width: 99.9%;
 }
@@ -38,7 +42,7 @@ h1.phrase {
 
 /* Information */
 .card {
-    
+    background-color: transparent;
     border-color:transparent;
     max-width: 70%;
     margin-top: 4%;
@@ -67,15 +71,8 @@ button.active, .buttonsAdop {
     margin-top: 5%;
 }
 
-.active {
-    background-color: var(--color-tertiary);
-}
-
 
 /* Animals in adoptions */
-.col {
-    background-color: var(--color-secondary);
-}
 
 span.carousel-control-prev-icon {
     background-color: var(--color-primary);
@@ -86,4 +83,5 @@ span.carousel-control-next-icon {
    background-color: var(--color-primary);
    margin-left: 62%;
 }
+
 
