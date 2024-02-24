@@ -8,7 +8,6 @@
         name="mail"
         formControlName="email"
         placeholder="ejemplo@ejemplo.com">
-      <p class="msgError">Email incorrecto</p>
     </div>
     <div class="group">
       <label for="formPassword">Contraseña:</label>
@@ -18,17 +17,21 @@
         name="password"
         formControlName="password"
         placeholder="*********">
-      <p class="msgError">La contraseña debe tener mínimo 5 caracteres</p>
-    </div>
-    <div class="button-container">
-      <button type="submit" id="buttonLogin">
-        Iniciar sesión
-      </button>
-      <p>o también puedes</p>
-      <button (click)="loginWithGoogle()" id="buttonGoogle">
-        Continuar con Google
-      </button>
-      <a href="#">¿No tienes cuenta? Regístrate</a>
+      </div>
+      <div class="button-container">
+        <p class="msgError">{{msgError}}</p>
+        <button
+          type="submit"
+          id="buttonLogin"
+          [disabled]="loginForm.invalid"
+          [ngClass]="{'disabledBtn': loginForm.invalid}">
+          Iniciar sesión
+        </button>
+        <p>o también puedes</p>
+        <button (click)="loginWithGoogle()" id="buttonGoogle">
+          <img src="../../../../../assets/google.png"/>
+            Continuar con Google
+        </button>
     </div>
   </form>
 </div>

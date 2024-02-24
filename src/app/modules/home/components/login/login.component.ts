@@ -10,6 +10,9 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 export class LoginComponent {
 
   loginForm: FormGroup;
+  msgError:String = 'Esperando el error';
+  showMsgErrorEmail:boolean = false;
+  showMsgErrorPassword:boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -28,7 +31,16 @@ export class LoginComponent {
 
       })
       .catch(error => {
-        console.log('error!!!', error)
+        const msgErrorElement = document.querySelector('.msgError') as HTMLElement | null;
+      if (msgErrorElement) {
+
+        msgErrorElement.style.visibility = 'visible';
+        setTimeout(() => {
+          msgErrorElement.style.visibility = 'hidden';
+        }, 4000);
+
+      }
+        this.msgError = 'Usuario incorrecto'
       });
   }
 

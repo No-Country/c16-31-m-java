@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+.login-container form{
+  width: 73%;
+}
+
 .group{
   display: flex;
   flex-direction: column;
@@ -20,19 +24,24 @@
   font-size: 1em ;
   font-weight: bold;
   margin-left: 8px;
-  margin-top: -10px;
 }
 
 .group input {
   border-radius: 20px;
   border: 3px solid #EBEBEB;
-  padding: 5px 10px;
+  padding: 8px 10px;
+  font-size: small;
+  margin-bottom: 15px;
+}
+
+.group input:focus{
+  border-color: var(--color-tertiary);
+  outline: none;
 }
 
 .msgError{
   visibility: hidden;
   font-size: small;
-  margin-left: 8px;
   color: red;
 }
 
@@ -49,12 +58,17 @@
   font-size: small;
   font-weight: bold;
   padding: 10px;
+  margin-top: -15px;
 }
 
-.button-container p, .button-container a{
+.button-container p{
   font-size: small;
   text-align: center;
   vertical-align: middle;
+}
+
+.disabledBtn::before, .disabledBtn::after{
+  content: '  🔒︎  ';
 }
 
 #buttonLogin{
@@ -71,7 +85,8 @@
   margin-top: -8px;
 }
 
-.button-container a{
-  margin-top: 20px;
-  color: inherit;
+#buttonGoogle img{
+  width: 18px;
+  margin-right: 5px;
 }
+
