@@ -11,8 +11,6 @@ export class LoginComponent {
 
   loginForm: FormGroup;
   msgError:String = 'Esperando el error';
-  showMsgErrorEmail:boolean = false;
-  showMsgErrorPassword:boolean = false;
 
   constructor(
     private authService: AuthService,
