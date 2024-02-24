@@ -8,11 +8,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
+  nameImg:string = "";
+  showAuthLogin:boolean = false;
+  showAuthRegister:boolean = false;
+
   constructor(public router: Router) {}
 
-  openModal() {
+  openModalLogin() {
     const modelDiv = document.getElementById('myModal')
     if(modelDiv != null){
+      this.nameImg = "../../../../assets/imgLogin.jpg"
+      this.showAuthLogin = true;
+      this.showAuthRegister = false;
       modelDiv.style.display = 'block';
     }
   }
@@ -21,6 +28,17 @@ export class HeaderComponent {
     const modelDiv = document.getElementById('myModal')
     if(modelDiv != null){
       modelDiv.style.display = 'none';
+
+    }
+  }
+
+  openModalRegister() {
+    const modelDiv = document.getElementById('myModal')
+    if(modelDiv != null){
+      this.nameImg = "../../../../assets/imgRegister.jpg"
+      this.showAuthLogin = false;
+      this.showAuthRegister = true;
+      modelDiv.style.display = 'block';
     }
   }
 
