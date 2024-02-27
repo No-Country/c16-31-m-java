@@ -64,19 +64,26 @@ export class RegisterComponent{
         localStorage.setItem('email', res.user.email as string);
         localStorage.setItem('user', 'persona');
 
-        this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
-          .then((res) => {
-            this.authService.getUserGoogle().subscribe({
-              next: (data) => {
-                console.log(data);
+        this.authService.getUserGoogle().subscribe({
+          next: (data:any) => {
+            console.log(data);
+            const emailFilter = data.filter((elem:any) => elem.email === res.user.email);
+            console.log(emailFilter);
 
-              }
-            })
-            console.log(res);
-          })
-          .catch(err => {
-            console.log(err);
-          })
+            if(emailFilter.length === 0){
+              this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
+                .then((res) => {
+                  console.log(res);
+                })
+                .catch(err => {
+                  console.log(err);
+                })
+            }
+          },
+          error: (error) => {
+            console.log(error);
+          }
+        })
       })
       .catch(err => {
         console.log('Errorrr');
