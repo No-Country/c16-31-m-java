@@ -34,6 +34,13 @@ export class RegisterComponent{
         localStorage.setItem('uid', response.user.uid);
         localStorage.setItem('email', response.user.email as string);
         localStorage.setItem('user', this.registerForm.value.user);
+        this.authService.registerUser(response.user.uid, this.registerForm.value)
+          .then((res) => {
+            console.log(res);
+          })
+          .catch(err => {
+            console.log(err);
+          })
 
       })
       .catch(error => {
@@ -56,6 +63,20 @@ export class RegisterComponent{
         localStorage.setItem('uid', res.user.uid);
         localStorage.setItem('email', res.user.email as string);
         localStorage.setItem('user', 'persona');
+
+        this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
+          .then((res) => {
+            this.authService.getUserGoogle().subscribe({
+              next: (data) => {
+                console.log(data);
+
+              }
+            })
+            console.log(res);
+          })
+          .catch(err => {
+            console.log(err);
+          })
       })
       .catch(err => {
         console.log('Errorrr');
