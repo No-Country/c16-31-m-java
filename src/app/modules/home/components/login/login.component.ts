@@ -18,40 +18,46 @@ export class LoginComponent {
   ) {
     this.loginForm = this.fb.group({
       email : ['', [Validators.required, Validators.email]],
-      password : ['', [Validators.required, Validators.minLength(5)]]
+      password : ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
   loginWithEmail() {
     this.authService.login(this.loginForm.value)
       .then((response)=> {
-        console.log('entreeee', response);
+        localStorage.setItem('uid', response.user.uid);
+        localStorage.setItem('email', response.user.email as string);
+        localStorage.setItem('user', this.loginForm.value.user);
 
       })
       .catch(error => {
         const msgErrorElement = document.querySelector('.msgError') as HTMLElement | null;
-      if (msgErrorElement) {
+        if (msgErrorElement) {
 
-        msgErrorElement.style.visibility = 'visible';
-        setTimeout(() => {
-          msgErrorElement.style.visibility = 'hidden';
-        }, 4000);
+          msgErrorElement.style.visibility = 'visible';
+          setTimeout(() => {
+            msgErrorElement.style.visibility = 'hidden';
+          }, 4000);
 
-      }
-        this.msgError = 'Usuario incorrecto'
-      });
+        }
+          this.msgError = 'Usuario o contraseña incorrectos.'
+        });
   }
 
   loginWithGoogle(){
     this.authService.loginWithGoogle()
       .then(res => {
-        console.log('Me autentifiqué :)');
-        console.log(res);
-
+        localStorage.setItem('uid', res.user.uid);
+        localStorage.setItem('email', res.user.email as string);
+        localStorage.setItem('user', 'persona');
       })
       .catch(err => {
-        console.log('Errorrr');
+        console.log(err);
       })
+  }
+
+  clearForm() {
+    this.loginForm.reset();
   }
 
 }

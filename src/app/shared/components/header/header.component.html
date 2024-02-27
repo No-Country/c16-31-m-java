@@ -41,8 +41,8 @@
         </div>
         <div class="modal-rigth">
           <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal"></button>
-          <app-login *ngIf="showAuthLogin"></app-login>
-          <app-register *ngIf="showAuthRegister"></app-register>
+          <app-login *ngIf="showAuthLogin" #loginComponent></app-login>
+          <app-register *ngIf="showAuthRegister" #registerComponent></app-register>
           <div class="link-container">
             <a class="link-auth" (click)="openModalRegister()" *ngIf="showAuthLogin">¿No tienes cuenta? Regístrate</a>
             <a class="link-auth" (click)="openModalLogin()" *ngIf="showAuthRegister">¿Ya tienes cuenta? Inicia sesión</a>

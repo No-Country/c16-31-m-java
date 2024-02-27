@@ -1,33 +1,11 @@
 <div class="register-container">
   <h5 class="modal-title">Registrarse</h5>
   <form [formGroup]="registerForm" (ngSubmit)="registerWithEmail()">
-    <div class="radio-btn-container">
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio1"
-          value="option1">
-        <label
-          class="form-check-label"
-          for="inlineRadio1">
-          Como persona
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="inlineRadioOptions"
-          id="inlineRadio2"
-          value="option2">
-        <label
-          class="form-check-label"
-          for="inlineRadio2">
-          Como refugio
-        </label>
-      </div>
+    <div class="select-container">
+      <select class="form-select form-select-sm select-register" aria-label="Small select example" formControlName="user">
+        <option value="persona">Como persona</option>
+        <option value="refugio">Como refugio</option>
+      </select>
     </div>
     <div class="group">
       <label for="formEmail">Usuario:</label>
@@ -36,7 +14,7 @@
         name="mail"
         formControlName="email"
         placeholder="ejemplo@ejemplo.com">
-      <p class="msgError" >Ingresa un correo válido</p>
+      <div class="msgErrorEmail" >{{msgError}}</div>
     </div>
     <div class="group">
       <label for="formPassword">Contraseña:</label>
@@ -46,7 +24,7 @@
         name="password"
         formControlName="password"
         placeholder="*********">
-      <p class="msgError" >Contraseña mínimo de 6 caracteres</p>
+      <div class="msgPassword" >*Contraseña mínimo de 6 caracteres.</div>
     </div>
     <div class="button-container">
       <button
@@ -64,3 +42,4 @@
     </div>
   </form>
 </div>
+

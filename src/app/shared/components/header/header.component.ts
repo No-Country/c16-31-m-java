@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { RegisterComponent } from 'src/app/modules/home/components/register/register.component';
+import { LoginComponent } from 'src/app/modules/home/components/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,14 @@ export class HeaderComponent {
   showAuthLogin:boolean = false;
   showAuthRegister:boolean = false;
 
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+  ) {
+
+  }
+  @ViewChild('registerComponent', { static: false }) registerComponent!: RegisterComponent;
+  @ViewChild('loginComponent', { static: false }) loginComponent!: LoginComponent;
+
 
   openModalLogin() {
     const modelDiv = document.getElementById('myModal')
@@ -28,7 +37,11 @@ export class HeaderComponent {
     const modelDiv = document.getElementById('myModal')
     if(modelDiv != null){
       modelDiv.style.display = 'none';
-
+    }
+    if (this.registerComponent) {
+      this.registerComponent.clearForm()
+    }else if(this.loginComponent){
+      this.loginComponent.clearForm();
     }
   }
 

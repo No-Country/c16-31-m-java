@@ -19,6 +19,15 @@ header nav{
   height: 100%;
 }
 
+header nav button:hover{
+  background-color: #01827B;
+  cursor: pointer;
+}
+
+.btn-active{
+  background-color: #01827B;
+}
+
 header nav button{
   width: 100%;
   text-align: center;
@@ -27,18 +36,9 @@ header nav button{
   height: 100%;
   border: none;
   font-size: 3vh;
-  background-color: var(--color-primary);
   font-family: var(--font-family-primary);
   color: var(--color-secondary);
-}
-
-header nav button:hover{
-  background-color: #01827B;
-  cursor: pointer;
-}
-
-.btn-active{
-  background-color: #01827B;
+  background-color: var(--color-primary);
 }
 
 .modal-container{
