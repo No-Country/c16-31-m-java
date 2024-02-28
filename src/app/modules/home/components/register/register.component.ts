@@ -27,8 +27,6 @@ export class RegisterComponent{
   }
 
   registerWithEmail() {
-    console.log(this.registerForm.value);
-
     this.authService.register(this.registerForm.value)
       .then((response)=> {
         localStorage.setItem('uid', response.user.uid);
@@ -68,8 +66,6 @@ export class RegisterComponent{
           next: (data:any) => {
             console.log(data);
             const emailFilter = data.filter((elem:any) => elem.email === res.user.email);
-            console.log(emailFilter);
-
             if(emailFilter.length === 0){
               this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
                 .then((res) => {
