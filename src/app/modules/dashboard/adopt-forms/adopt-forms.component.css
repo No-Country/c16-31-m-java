@@ -1,0 +1,51 @@
+main {
+    background-image: url(../../../../assets/backgroundModal.png);
+}
+
+.rounded {
+    width: 50%;
+}
+
+.col-4 {
+    border-right: var(--color-tertiary) 2px solid;
+}
+
+.form-title{
+    font-family: var(--font-family-primary);
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-label {
+    font-family: var(--font-family-primary);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.btn-save{
+    border-color: var(--color-primary);
+    border-radius: 40px;
+    height: 35px; 
+}
+
+.btn-post{
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    height: 45px;
+    width: 50%;
+    border-radius: 40px;
+}
+
+
+span.carousel-control-prev-icon {
+    background-color: var(--color-primary);
+    margin-left: -62%;
+ }
+
+span.carousel-control-next-icon {
+   background-color: var(--color-primary);
+   margin-left: 62%;
+}
