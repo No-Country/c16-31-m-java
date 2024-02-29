@@ -68,7 +68,7 @@ export class RegisterComponent{
             if(emailFilter.length === 0){
               this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
                 .then((res) => {
-                  console.log(res);
+                  console.log('Yes');
                 })
                 .catch(err => {
                   console.log(err);

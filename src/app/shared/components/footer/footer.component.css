@@ -18,6 +18,7 @@ footer div{
 
 footer nav{
   grid-area: nav;
+  margin: 20px;
 }
 
 footer nav ul{
