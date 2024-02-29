@@ -23,12 +23,13 @@
         <button
           type="submit"
           id="buttonLogin"
+          data-bs-dismiss="modal"
           [disabled]="loginForm.invalid"
           [ngClass]="{'disabledBtn': loginForm.invalid}">
           Iniciar sesión
         </button>
         <p>o también puedes</p>
-        <button (click)="loginWithGoogle()" id="buttonGoogle">
+        <button (click)="loginWithGoogle()" id="buttonGoogle" data-bs-dismiss="modal">
           <img src="../../../../../assets/google.png"/>
             Continuar con Google
         </button>

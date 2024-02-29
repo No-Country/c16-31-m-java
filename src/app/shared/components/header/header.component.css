@@ -15,7 +15,6 @@ header img{
 header nav{
   display: flex;
   justify-content: space-between;
-  width: 50%;
   height: 100%;
 }
 
@@ -31,7 +30,7 @@ header nav button:hover{
 header nav button{
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 5px 20px;
   font-weight: 600;
   height: 100%;
   border: none;
@@ -39,6 +38,13 @@ header nav button{
   font-family: var(--font-family-primary);
   color: var(--color-secondary);
   background-color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.btn-logOut{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 
 .modal-container{
