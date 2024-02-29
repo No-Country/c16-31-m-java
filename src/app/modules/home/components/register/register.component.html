@@ -30,12 +30,13 @@
       <button
         type="submit"
         id="buttonRegister"
+        data-bs-dismiss="modal"
         [disabled]="registerForm.invalid"
         [ngClass]="{'disabledBtn': registerForm.invalid}">
         Registrarse
       </button>
       <p>o también puedes</p>
-      <button (click)="loginWithGoogle()" id="buttonGoogle">
+      <button (click)="loginWithGoogle()" id="buttonGoogle" data-bs-dismiss="modal">
         <img src="../../../../../assets/google.png"/>
           Continuar con Google
       </button>

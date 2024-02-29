@@ -16,18 +16,36 @@
       [ngClass]="{'btn-active':router.url === '/dashboard'}">
       Adoptar
     </button>
-    <button
-      (click)="openModalRegister()"
-      data-bs-toggle="modal"
-      data-bs-target="#myModal">
-      Registrarse
-    </button>
-    <button
-      (click)="openModalLogin()"
-      data-bs-toggle="modal"
-      data-bs-target="#myModal">
-      Iniciar sesión
-    </button>
+    <ng-container *ngIf="!showHeaderForUserType else onlineUser">
+      <button
+        (click)="openModalRegister()"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">
+        Registrarse
+      </button>
+      <button
+        (click)="openModalLogin()"
+        data-bs-toggle="modal"
+        data-bs-target="#myModal">
+        Iniciar sesión
+      </button>
+    </ng-container>
+    <ng-template #onlineUser>
+      <button
+        *ngIf="showEditButton"
+        [routerLink]="['/dashboard/adopts-forms']">
+        Editar perfil
+      </button>
+      <button
+        (click)="btnLogOut()"
+        class="btn-logOut">
+        {{userName}}
+        <span
+          class="material-symbols-outlined">
+          logout
+        </span>
+      </button>
+    </ng-template>
   </nav>
 </header>
 

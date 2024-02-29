@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent{
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
-
+    private userService: UserService
   ) {
     this.registerForm = this.fb.group({
       email : ['', [Validators.required, Validators.email]],
@@ -31,7 +32,6 @@ export class RegisterComponent{
       .then((response)=> {
         localStorage.setItem('uid', response.user.uid);
         localStorage.setItem('email', response.user.email as string);
-        localStorage.setItem('user', this.registerForm.value.user);
         this.authService.registerUser(response.user.uid, this.registerForm.value)
           .then((res) => {
             console.log(res);
@@ -39,6 +39,7 @@ export class RegisterComponent{
           .catch(err => {
             console.log(err);
           })
+        this.userService.setUserStatus(true);
 
       })
       .catch(error => {
@@ -60,11 +61,9 @@ export class RegisterComponent{
       .then(res => {
         localStorage.setItem('uid', res.user.uid);
         localStorage.setItem('email', res.user.email as string);
-        localStorage.setItem('user', 'persona');
 
         this.authService.getUserGoogle().subscribe({
           next: (data:any) => {
-            console.log(data);
             const emailFilter = data.filter((elem:any) => elem.email === res.user.email);
             if(emailFilter.length === 0){
               this.authService.registerUserWithGoogle(res.user.uid, res.user.email!, this.registerForm.value.user)
@@ -80,8 +79,10 @@ export class RegisterComponent{
             console.log(error);
           }
         })
+        this.userService.setUserStatus(true);
       })
       .catch(err => {
+        this.userService.setUserStatus(false);
         console.log('Errorrr');
       })
   }
