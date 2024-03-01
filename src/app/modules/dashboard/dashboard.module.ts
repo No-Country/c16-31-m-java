@@ -7,13 +7,15 @@ import { AdoptFormsComponent } from './adopt-forms/adopt-forms.component';
 import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
 import { RefugeProfileComponent } from './components/refuge-profile/refuge-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdoptFormsAnimalRescuedComponent } from './adopt-forms-animal-rescued/adopt-forms-animal-rescued.component';
 
 @NgModule({
   declarations: [
     AdoptComponent,
     AdoptFormsComponent,
     AnimalProfileComponent,
-    RefugeProfileComponent
+    RefugeProfileComponent,
+    AdoptFormsAnimalRescuedComponent
   ],
   imports: [
     CommonModule,
