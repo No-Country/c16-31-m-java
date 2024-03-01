@@ -5,83 +5,89 @@
       <!-- Perfil del Refugio -->
       <div class="col-4">
            <h1 class="form-title">PERFIL DEL REFUGIO</h1>
-           <img src="../../../../assets/addImage.jpg" class="rounded mx-auto d-block" alt="...">
-           <input class="form-control" type="file" id="formFile">
-           <br>
-           <!-- Name -->
-           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-center">Nombre</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1">
-          </div>
-           
-          <!-- Country and City -->
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="col">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">País</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1">
+           <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+              <!-- <img src="../../../../assets/addImage.jpg" class="rounded mx-auto d-block" alt="..."> -->
+              <img [src]="image" *ngFor="let image of images" class="rounded mx-auto d-block" alt="...">
+              <br>
+              <input class="form-control" type="file" id="formFile" (change)="uploadImage($event)" formControlName="image">
+              <br>
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-center" >Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name">
+              </div>
+              
+              <!-- Country and City -->
+              <div class="container text-center">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label" >País</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="country">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label" >Ciudad</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="city">
+                    </div>
+                  </div>              
                 </div>
               </div>
-              <div class="col">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1">
+
+              <!-- Description -->
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" >Descripción</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="description"></textarea>
+              </div>
+
+              <!-- Red Social -->
+              <label for="exampleFormControlInput1" class="form-label">Redes sociales</label>
+              <div class="col-12">
+                <label class="visually-hidden"></label>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="bi bi-facebook"></i></div>
+                  <input type="text" class="form-control" placeholder="Facebook" formControlName="linkFacebook">
                 </div>
-              </div>              
-            </div>
-          </div>
+              </div><br>
 
-          <!-- Description -->
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
+              <div class="col-12">
+                <label class="visually-hidden"></label>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="bi bi-instagram"></i></div>
+                  <input type="text" class="form-control" placeholder="Instagram" formControlName="linkInstagram">
+                </div>
+              </div><br>
 
-          <!-- Red Social -->
-          <label for="exampleFormControlInput1" class="form-label">Redes sociales</label>
-          <div class="col-12">
-            <label class="visually-hidden"></label>
-            <div class="input-group">
-              <div class="input-group-text"><i class="bi bi-facebook"></i></div>
-              <input type="text" class="form-control" placeholder="Facebook">
-            </div>
-          </div><br>
+              <div class="col-12">
+                <label class="visually-hidden"></label>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="bi bi-whatsapp"></i></div>
+                  <input type="text" class="form-control" placeholder="WhatsApp" formControlName="linkWhatsApp">
+                </div>
+              </div><br>
+              
+              <div class="col-12">
+                <label class="visually-hidden"></label>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="bi bi-globe"></i></div>
+                  <input type="text" class="form-control" placeholder="Link Página Web" formControlName="linkPageWeb">
+                </div>
+              </div><br>
 
-          <div class="col-12">
-            <label class="visually-hidden"></label>
-            <div class="input-group">
-              <div class="input-group-text"><i class="bi bi-instagram"></i></div>
-              <input type="text" class="form-control" placeholder="Instagram">
-            </div>
-          </div><br>
+              <!-- Donations -->
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Aceptan Donaciones de</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="donations"></textarea>
+              </div>
 
-          <div class="col-12">
-            <label class="visually-hidden"></label>
-            <div class="input-group">
-              <div class="input-group-text"><i class="bi bi-whatsapp"></i></div>
-              <input type="text" class="form-control" placeholder="WhatsApp">
-            </div>
-          </div><br>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn-save" type="submit">Guardar</button>
+                
+              </div>
+
+           </form>
           
-          <div class="col-12">
-            <label class="visually-hidden"></label>
-            <div class="input-group">
-              <div class="input-group-text"><i class="bi bi-globe"></i></div>
-              <input type="text" class="form-control" placeholder="Link Página Web">
-            </div>
-          </div><br>
-
-          <!-- Donations -->
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Aceptan Donaciones de</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn-save" type="button">Guardar</button>
-            
-          </div>
       </div>
 
         <!-- Perfil del Animal -->

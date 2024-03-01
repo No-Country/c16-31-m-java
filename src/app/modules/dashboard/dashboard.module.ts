@@ -6,7 +6,7 @@ import { AdoptComponent } from './adopt/adopt.component';
 import { AdoptFormsComponent } from './adopt-forms/adopt-forms.component';
 import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
 import { RefugeProfileComponent } from './components/refuge-profile/refuge-profile.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,9 @@ import { RefugeProfileComponent } from './components/refuge-profile/refuge-profi
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }
