@@ -41,7 +41,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     provideStorage(() => getStorage()),
     provideRemoteConfig(() => getRemoteConfig()),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"nc-adoptame","appId":"1:720583742027:web:376f5e9643057c81fff3ce","storageBucket":"nc-adoptame.appspot.com","apiKey":"AIzaSyDxh-p9h-gXM9E_t54MsYdW9_xl7fnwVi0","authDomain":"nc-adoptame.firebaseapp.com","messagingSenderId":"720583742027"})),
+    provideFirebaseApp(() => initializeApp({"projectId":"nc-adoptame","appId":"1:720583742027:web:376f5e9643057c81fff3ce","storageBucket":"nc-adoptame.appspot.com","apiKey":"AIzaSyDxh-p9h-gXM9E_t54MsYdW9_xl7fnwVi0","authDomain":"nc-adoptame.firebaseapp.com","messagingSenderId":"720583742027"}))
   ],
   providers: [
     ScreenTrackingService,
