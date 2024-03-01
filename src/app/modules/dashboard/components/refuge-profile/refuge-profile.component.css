@@ -1,0 +1,21 @@
+.refuge-pf-container img{
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.social-red-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  list-style: none;
+  margin: 20px 90px 40px 90px;
+  padding: 0;
+}
+
+.social-red-container li{
+  cursor: pointer;
+}
+
+.refuge-pf-container p{
+  margin-inline: 8%;
+}
