@@ -7,6 +7,7 @@ import { AnimalProfileComponent } from './animal-profile/animal-profile.componen
 const routes: Routes = [
   { path: '', component: AdoptComponent },
   { path: 'adopts-forms', component: AdoptFormsComponent },
+  { path: 'adopts-forms-animalRescued', component: AdoptFormsComponent },
   { path: 'aaa', component: AnimalProfileComponent }
 ];
 
