@@ -1,14 +1,17 @@
 .animal-profile-container{
   background-image: url(../../../../assets/backgroundModal.png);
   font-family: var(--font-family-primary);
+  display: grid;
 }
 
 .slider-container{
-  width: 40%;
+  width: 100%;
+  grid-area: slider;
 }
 
 .information-animal-container{
-  width: 57%;
+  width: 100%;
+  grid-area: info;
 }
 
 .information-animal-container div{
@@ -35,8 +38,9 @@
 }
 
 .chat-container{
-  width: 57%;
+  width: 100%;
   padding-inline: 30px;
+  grid-area: chat;
 }
 
 .chat-container strong{
@@ -96,16 +100,55 @@
 }
 
 .refuge-profile-container{
-  width: 40%;
+  width: 100%;
   background-color: rgba(5, 7, 19, 0.075);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 25px;
+  grid-area: refuge;
 }
 
-/* sdfsdf */
+
+@media screen and (max-width: 1023px) {
+
+  .refuge-profile-container{
+    padding: 25px 10px 25px 10px;
+    margin: 50px 0;
+  }
+
+  .animal-profile-container{
+    grid-template-areas: "slider"
+                        "info"
+                        "refuge"
+                        "chat";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .animal-profile-container{
+    grid-template-areas: "slider info"
+                          "refuge chat" ;
+    gap: 40px;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .slider-container{
+    padding: 40px;
+  }
+
+  .information-animal-container div p{
+    padding-right: 40px;
+  }
+
+  .refuge-profile-container{
+    margin-inline: 30px;
+    padding-inline: 4px;
+    width: 95%;
+  }
+}
 
 
 

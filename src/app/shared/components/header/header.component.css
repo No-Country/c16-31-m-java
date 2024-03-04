@@ -1,44 +1,16 @@
 header{
   background-color: var(--color-primary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-header img{
-  width: 12%;
-  margin: 4px 10px;
-  padding: .5% 0 .5% 15px;
-}
-
-header nav{
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-}
-
-header nav button:hover{
-  background-color: #01827B;
-  cursor: pointer;
-}
-
-.btn-active{
-  background-color: #01827B;
+  height: 53px;
 }
 
 header nav button{
-  width: 100%;
-  text-align: center;
-  padding: 5px 20px;
   font-weight: 600;
-  height: 100%;
   border: none;
-  font-size: 3vh;
   font-family: var(--font-family-primary);
   color: var(--color-secondary);
   background-color: var(--color-primary);
   white-space: nowrap;
+  font-size: 3vh;
 }
 
 .btn-logOut{
@@ -47,44 +19,152 @@ header nav button{
   column-gap: 10px;
 }
 
-.modal-container{
-  display: flex;
-  background-color: var(--color-secondary);
-  width: 100%;
-}
-
-.modal-left{
-  width: 50%;
-  padding: -30px;
-}
-
-.modal-left img{
-  width: 100%;
-}
-
-.modal-rigth{
-  background-image: url("../../../../assets/backgroundModal.png");
-  background-position: center;
-  width: 50%;
-}
-
-.modal-rigth button{
-  right: 0;
-  margin-left: 92%;
-  margin-top: 10px;
-}
-
-.link-container{
-  text-align: center;
-  margin-top: 30px;
-}
-
 .link-auth{
   color: inherit;
   font-size: small;
   cursor: pointer;
   font-family: var(--font-family-primary);
 }
+
+@media screen and (min-width: 1024px) {
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header img{
+    height: 50px;
+    margin: 4px 10px;
+    padding: .5% 0 .5% 15px;
+  }
+
+  header nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  header nav button:hover{
+    background-color: #01827B;
+    cursor: pointer;
+  }
+
+  .btn-active{
+    background-color: #01827B;
+  }
+
+  header nav button{
+    width: 100%;
+    text-align: center;
+    padding: 5px 20px;
+  }
+
+  .modal-container{
+    display: flex;
+    background-color: var(--color-secondary);
+    width: 100%;
+  }
+
+  .modal-left{
+    width: 50%;
+    padding: -30px;
+  }
+
+  .modal-left img{
+    width: 100%;
+  }
+
+  .modal-rigth{
+    background-image: url("../../../../assets/backgroundModal.png");
+    background-position: center;
+    width: 50%;
+  }
+
+  .modal-rigth button{
+    right: 0;
+    margin-left: 92%;
+    margin-top: 10px;
+  }
+
+  .link-container{
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .hamburguer{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+  header{
+    height: 50px;
+  }
+
+  header img{
+    height: 40px;
+    padding: 7px 0 2px 13px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  nav .btn-header{
+    height: 50px;
+    width: 100%;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburguer{
+    display: block;
+    position: relative;
+    left: 90%;
+    top: -30px;
+    border: none;
+    color: var(--color-secondary);
+    font-weight: bolder;
+    background-color: transparent;
+    font-size: larger;
+    margin-right: 5px;
+  }
+
+  .btn-logOut{
+    justify-content: center;
+  }
+
+  .link-auth{
+    display: block;
+    text-align: center;
+    margin: 40px auto 20px auto;
+  }
+
+  .modal-rigth .btn-close{
+    padding: 10px;
+  }
+
+  .modal-left{
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+
+} */
 
 
 

@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   showEditButton:boolean = false;
   userName:string = "";
   userEmail = "";
+  isMenuActive: boolean = false;
 
   constructor(
     public router: Router,
@@ -114,5 +115,10 @@ export class HeaderComponent implements OnInit {
       }
     })
   }
+
+  toggleMenu(): void {
+    this.isMenuActive = !this.isMenuActive;
+  }
+
 
 }
