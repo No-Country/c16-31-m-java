@@ -1,1 +1,115 @@
-
+<div class="adopt-container">
+  <button class="btn-toggle-search" (click)="toggleMenuSearch()">{{textBtnSearch}}</button>
+  <div class="search-container" [ngClass]="{'active': isMenuActive}">
+    <img src="../../../../assets/dashboardPG.png" alt="Un perro y un gato felices"/>
+    <div class="container-fluid div-search-container">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 input-search-container" type="search" placeholder="Buscar" aria-label="Search">
+      </form>
+    </div>
+    <div class="filter-container">
+      <div class="one-filter-container">
+        <label>Especie</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="1">Gato</option>
+          <option value="2">Perro</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>Sexo</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="macho">Macho</option>
+          <option value="hembra">Hembra</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>Edad</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="0a3">0 - 3 años</option>
+          <option value="3a6">3 - 6 años</option>
+          <option value="6a+">+6 años</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>Tamaño</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>País</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="argentina">Argentina</option>
+          <option value="peru">Perú</option>
+          <option value="chile">Chile</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>Ciudad</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="buenosAires">Buenos Aires</option>
+          <option value="lima">Lima</option>
+          <option value="concepcion">Concepción</option>
+        </select>
+      </div>
+      <div class="one-filter-container">
+        <label>Refugio</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Elige una opción</option>
+          <option value="4patas">4 Patas</option>
+          <option value="vozAnimal">Voz animal</option>
+          <option value="callejeritos">Callejeritos</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="all-cards-container">
+    <h2>¿Serias mi mami o papi humano?</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="../../../../assets/animal1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Lorem</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../../assets/animal2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Angelina</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../../assets/animal3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Carita</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../../assets/animal1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Popi</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../../assets/animal2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Marin</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../../../assets/animal3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Kira</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

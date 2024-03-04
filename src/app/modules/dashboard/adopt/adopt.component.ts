@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AdoptComponent {
 
+  isMenuActive: boolean = false;
+  textBtnSearch: string = 'Buscar';
+
+  toggleMenuSearch(): void {
+    this.isMenuActive = !this.isMenuActive;
+    if(this.isMenuActive === false){
+      this.textBtnSearch = 'Buscar'
+    }else{
+      this.textBtnSearch = 'Cerrar'
+    }
+  }
 }

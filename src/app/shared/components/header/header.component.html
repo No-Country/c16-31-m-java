@@ -1,29 +1,35 @@
 <header>
   <img src="../../../../assets/tittle.png" alt="Logo de la app, adóptame, con una huella en vez de la o"/>
-  <nav>
+  <button class="hamburguer" (click)="toggleMenu()">☰</button>
+  <nav [ngClass]="{'active': isMenuActive}">
     <button
+      class="btn-header"
       [routerLink]="['/home']"
       [ngClass]="{'btn-active':router.url === '/home'}">
       Inicio
     </button>
     <button
+      class="btn-header"
       [routerLink]="['/home/aboutUs']"
       [ngClass]="{'btn-active':router.url === '/home/aboutUs'}">
       Quienes somos
     </button>
     <button
+      class="btn-header"
       [routerLink]="['/dashboard']"
       [ngClass]="{'btn-active':router.url === '/dashboard'}">
       Adoptar
     </button>
     <ng-container *ngIf="!showHeaderForUserType else onlineUser">
       <button
+        class="btn-header"
         (click)="openModalRegister()"
         data-bs-toggle="modal"
         data-bs-target="#myModal">
         Registrarse
       </button>
       <button
+        class="btn-header"
         (click)="openModalLogin()"
         data-bs-toggle="modal"
         data-bs-target="#myModal">
@@ -32,13 +38,14 @@
     </ng-container>
     <ng-template #onlineUser>
       <button
+        class="btn-header"
         *ngIf="showEditButton"
         [routerLink]="['/dashboard/adopts-forms']">
         Editar perfil
       </button>
       <button
         (click)="btnLogOut()"
-        class="btn-logOut">
+        class="btn-logOut btn-header">
         {{userName}}
         <span
           class="material-symbols-outlined">

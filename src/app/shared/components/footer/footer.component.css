@@ -39,3 +39,10 @@ footer > p{
   grid-area: copyright;
   text-align: center;
 }
+
+@media screen and (max-width: 1023px) {
+
+  footer nav{
+    display: none;
+  }
+}

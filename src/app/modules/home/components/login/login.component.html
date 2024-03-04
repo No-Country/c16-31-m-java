@@ -23,7 +23,7 @@
         <button
           type="submit"
           id="buttonLogin"
-          data-bs-dismiss="modal"
+          [attr.data-bs-dismiss]="dataDismissValue"
           [disabled]="loginForm.invalid"
           [ngClass]="{'disabledBtn': loginForm.invalid}">
           Iniciar sesión

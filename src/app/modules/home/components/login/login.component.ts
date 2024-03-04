@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from 'src/app/service/user.service';
@@ -12,6 +12,7 @@ export class LoginComponent {
 
   loginForm: FormGroup;
   msgError:String = 'Esperando el error';
+  dataDismissValue: string = '';
 
   constructor(
     private authService: AuthService,
@@ -27,23 +28,26 @@ export class LoginComponent {
   loginWithEmail() {
     this.authService.login(this.loginForm.value)
       .then((response)=> {
+        this.dataDismissValue = 'modal';
         localStorage.setItem('uid', response.user.uid);
         localStorage.setItem('email', response.user.email as string);
         this.userService.setUserStatus(true);
 
       })
       .catch(error => {
+
         const msgErrorElement = document.querySelector('.msgError') as HTMLElement | null;
         if (msgErrorElement) {
-
           msgErrorElement.style.visibility = 'visible';
           setTimeout(() => {
             msgErrorElement.style.visibility = 'hidden';
           }, 4000);
+          console.log('aaa');
+
 
         }
           this.msgError = 'Usuario o contraseña incorrectos.'
-        });
+      });
   }
 
   loginWithGoogle(){
