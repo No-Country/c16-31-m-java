@@ -6,12 +6,24 @@
 
 .div-search-container{
   margin-bottom: 25px;
+  padding-inline: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-search-container{
   background-color: #D9D9D9;
   border-radius: 25px;
   font-family: var(--font-family-primary);
+}
+
+.btn-clear{
+  font-size: smaller;
+  font-family: var(--font-family-primary);
+  border: 2px solid #D9D9D9;
+  background-color: var(--color-secondary);
+  color: #b3b3b3;
+  border-radius: 25px;
 }
 
 .search-container img{
@@ -52,7 +64,6 @@
   text-align: center;
   font-family: var(--font-family-secondary);
   font-weight: bolder;
-
 }
 
 .cards-container .card .card-body p{
@@ -88,6 +99,12 @@
 
   .card{
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  .card{
+    width: 30% !important;
   }
 }
 
