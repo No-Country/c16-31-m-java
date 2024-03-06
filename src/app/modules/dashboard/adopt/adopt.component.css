@@ -59,6 +59,10 @@
   gap: 20px;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .all-cards-container h2{
   color: var(--color-primary);
   text-align: center;
@@ -71,6 +75,13 @@
   font-family: var(--font-family-primary);
   font-weight: bold;
   color: var(--color-tertiary)
+}
+
+.card-body div{
+  font-size: small;
+  text-align: center;
+  width: 100%;
+  margin-top: -15px;
 }
 
 .btn-toggle-search{
@@ -99,6 +110,43 @@
 
   .card{
     width: 30%;
+    position: relative;
+  }
+
+  .card:hover .bday-decor{
+    display: block;
+  }
+
+  .bday-decor{
+    display: none;
+    font-size: 50px;
+    opacity: 0.8;
+  }
+
+  .bday-decor span{
+    color: var(--color-secondary);
+  }
+
+  .bday-decor--bottom-right {
+    position: absolute;
+    bottom: 25%;
+  }
+
+  .card:hover .zoom-left-in-out {
+    animation-name: zoom-left-in-out;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite;
+    transform-origin: left bottom;
+  }
+
+  @keyframes zoom-left-in-out {
+    0%, 100% {
+      transform: scale(0.95) rotate(2deg);
+    }
+
+    50% {
+      transform: scale(1) rotate(-2deg);
+    }
   }
 }
 

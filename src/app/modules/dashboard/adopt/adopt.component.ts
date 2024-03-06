@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-adopt',
   templateUrl: './adopt.component.html',
@@ -20,6 +20,10 @@ export class AdoptComponent implements OnInit{
     city: null,
     refuge: null,
   };
+
+  constructor(private router: Router){
+
+  }
 
   applyFilters() {
     this.filteredObjAdopt = this.objAdopt.filter((card) => {
@@ -62,16 +66,18 @@ export class AdoptComponent implements OnInit{
     this.filteredObjAdopt = this.objAdopt
   }
 
-
   objAdopt: any[] = [
-    { name: 'Lola p h 36 g p li 4p', imageUrl: '../../../../assets/animal1.jpg', species:'perro', sex:'hembra', age:'3a6', size:'grande', country:'peru', city:'lima', refuge:'4patas' },
-    { name: 'Martin g m 36 m ar ba va', imageUrl: '../../../../assets/animal2.jpg', species:'gato', sex:'macho', age:'3a6', size:'mediano', country:'argentina', city:'buenosAires', refuge:'vozAnimal'},
-    { name: 'Rosita g h 03 g p li cal', imageUrl: '../../../../assets/animal3.jpg', species:'gato', sex:'hembra', age:'0a3', size:'grande', country:'peru', city:'lima', refuge:'callejeritos' },
-    { name: 'Tito p m 36 p ar ba cal', imageUrl: '../../../../assets/animal1.jpg', species:'perro', sex:'macho', age:'3a6', size:'pequeño', country:'argentina', city:'buenosAires', refuge:'callejeritos' },
-    { name: 'Rose g h 6+ p ch co 4p', imageUrl: '../../../../assets/animal2.jpg', species:'gato', sex:'hembra', age:'6a+', size:'pequeño', country:'chile', city:'concepcion', refuge:'4patas' },
-    { name: 'Kira g h 6+ g ch co 4p', imageUrl: '../../../../assets/animal3.jpg', species:'gato', sex:'hembra', age:'6a+', size:'grande', country:'chile', city:'concepcion', refuge:'4patas' },
+    { name: 'Lola p h 36 g p li 4p', imageUrl: '../../../../assets/animal1.jpg', species:'perro', sex:'hembra', age:'3a6', size:'grande', country:'peru', city:'lima', refuge:'4patas', id:'23423lola' },
+    { name: 'Martin g m 36 m ar ba va', imageUrl: '../../../../assets/animal2.jpg', species:'gato', sex:'macho', age:'3a6', size:'mediano', country:'argentina', city:'buenosAires', refuge:'vozAnimal', id:'23455martin' },
+    { name: 'Rosita g h 03 g p li cal', imageUrl: '../../../../assets/animal3.jpg', species:'gato', sex:'hembra', age:'0a3', size:'grande', country:'peru', city:'lima', refuge:'callejeritos', id:'23423rosita' },
+    { name: 'Tito p m 36 p ar ba cal', imageUrl: '../../../../assets/animal1.jpg', species:'perro', sex:'macho', age:'3a6', size:'pequeño', country:'argentina', city:'buenosAires', refuge:'callejeritos', id:'75675tito' },
+    { name: 'Rose g h 6+ p ch co 4p', imageUrl: '../../../../assets/animal2.jpg', species:'gato', sex:'hembra', age:'6a+', size:'pequeño', country:'chile', city:'concepcion', refuge:'4patas', id:'8745646rose' },
+    { name: 'Kira g h 6+ g ch co 4p', imageUrl: '../../../../assets/animal3.jpg', species:'gato', sex:'hembra', age:'6a+', size:'grande', country:'chile', city:'concepcion', refuge:'4patas', id:'2345345kira'},
   ];
 
+  goToProfileAnimal(id:string){
+    this.router.navigate(['/dashboard', id]);
+  }
 
   onSearchNameAdopt() {
     this.filteredObjAdopt = this.objAdopt.filter((card) => {
