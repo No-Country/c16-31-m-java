@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AnimalProfileComponent {
 
+  constructor() {
+
+  }
+
+  /* getAllCollectionAnimal(){
+    this.animalProfileService.getAnimalCollection().subscribe({
+      next: (collection) => {
+        console.log(collection);
+
+      },
+      error: (err)=> {
+        console.log(err);
+
+      }
+    })
+  } */
+
 }

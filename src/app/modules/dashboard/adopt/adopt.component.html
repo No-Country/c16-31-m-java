@@ -82,10 +82,15 @@
   <div class="all-cards-container">
     <h2>¿Serias mi mami o papi humano?</h2>
     <div class="cards-container">
-      <div class="card" *ngFor="let one of filteredObjAdopt">
+      <div class="card" (click)="goToProfileAnimal(one.id)" *ngFor="let one of filteredObjAdopt">
         <img src="{{one.imageUrl}}" class="card-img-top" alt="{{one.name}}">
         <div class="card-body">
           <p class="card-text">{{one.name}}</p>
+          <div>Click para más información</div>
+          <p class="bday-decor bday-decor--bottom-right zoom-left-in-out">
+            <span>¿Me adoptas?</span>
+            🐾
+          </p>
         </div>
       </div>
     </div>
