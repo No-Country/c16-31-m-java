@@ -2,8 +2,18 @@ main {
     background-image: url(../../../../assets/backgroundModal.png);
 }
 
-.rounded {
-    width: 50%;
+.imgAdd {
+  width: 15%;
+  margin: 9% 0%;
+}
+
+.imgPhoto{
+  margin: 9% 0% 0% 0%;
+  width: 30%;
+ 
+}
+.btnImg{
+    margin: 17% 0% 0% 0%;
 }
 
 .col-4 {
@@ -30,22 +40,9 @@ main {
     height: 35px; 
 }
 
-.btn-post{
-    border-color: var(--color-primary);
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    height: 45px;
-    width: 50%;
-    border-radius: 40px;
+/* Style for Pais and Ciudad */
+.selectPyC{
+    padding-inline: 0% 10%;
 }
 
 
-span.carousel-control-prev-icon {
-    background-color: var(--color-primary);
-    margin-left: -62%;
- }
-
-span.carousel-control-next-icon {
-   background-color: var(--color-primary);
-   margin-left: 62%;
-}
