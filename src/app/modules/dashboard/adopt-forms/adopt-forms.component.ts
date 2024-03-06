@@ -11,14 +11,11 @@ import { PerfilRefugioService } from 'src/app/service/perfil-refugio.service';
 export class AdoptFormsComponent {
  
   formulario: FormGroup;
-
   images: string[];
+  oneImg : string = "";
 
-  
-
-  constructor(private storage: Storage, private perfilrefugios:PerfilRefugioService) {
+  constructor(private storage: Storage, private perfilRef:PerfilRefugioService) {
     this.images = [];
-
     this.formulario = new FormGroup({
       image: new FormControl(),
       name:new FormControl(),
@@ -34,6 +31,7 @@ export class AdoptFormsComponent {
   }
 
   
+  
 
   uploadImage($event: any) {
     const file = $event.target.files[0];
@@ -43,33 +41,43 @@ export class AdoptFormsComponent {
 
     uploadBytes(imgRef, file)
       .then(response => {
-        console.log(response)
+        console.log("AAA: ",response)
         this.getImages();
       })
       .catch(error => console.log(error));
 
   }
 
-  getImages() {
+getImages() {
     const imagesRef = ref(this.storage, 'perfilRefugio');
-
     listAll(imagesRef)
       .then(async response => {
         console.log(response);
         this.images = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          console.log(url);
+          console.log(url);  
           this.images.push(url);
         }
+    
+        this.oneImg = this.images.slice(0)[0];
+
       })
-      .catch(error => console.log(error));
+
+      .catch(error => console.log(error));     
   }
+  
 
   // Crear el perfil del Refugio
   async onSubmit() {
+    const frmImg = {
+       ...this.formulario.value, 
+       imgURL: this.oneImg,
+       emailRefugio: localStorage.getItem('email') as string
+    };
     console.log(this.formulario.value)
-    const response = await this.perfilrefugios.addPerfilRefugio(this.formulario.value);
+    const response = await this.perfilRef.addPerfilRefugio(frmImg);
     console.log(response);
+    this.formulario.reset();
   }
 }
