@@ -7,7 +7,8 @@ import { AnimalProfileComponent } from './animal-profile/animal-profile.componen
 const routes: Routes = [
   { path: '', component: AdoptComponent },
   { path: 'adopts-forms', component: AdoptFormsComponent },
-  { path: ':id', component: AnimalProfileComponent }
+  { path: ':id', component: AnimalProfileComponent },
+  { path: 'adopts-forms-animalRescued', component: AdoptFormsComponent },
 ];
 
 @NgModule({
