@@ -3,7 +3,7 @@
   <div class="container ">
     <div class="row">
       <!-- Perfil del Refugio -->
-      <div class="col-4">
+      <div class="col-4 perfilRefuge">
            <h1 class="form-title">PERFIL DEL REFUGIO</h1>
            <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <div class="mb-3">  
@@ -93,7 +93,7 @@
       </div>
 
         <!-- Perfil del Animal -->
-      <div class="col-8">
+      <div class="col-8  perfilAnimal">
         <app-adopt-forms-animal-rescued></app-adopt-forms-animal-rescued>
       </div>
     </div>
