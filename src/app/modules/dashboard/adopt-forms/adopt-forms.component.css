@@ -40,9 +40,21 @@ main {
     height: 35px; 
 }
 
-/* Style for Pais and Ciudad */
+/* Style for Country and City */
 .selectPyC{
     padding-inline: 0% 10%;
 }
 
 
+
+
+@media screen and (max-width: 600px) {
+    .perfilRefuge, .perfilAnimal {
+        width: 100%;
+    }
+
+    .perfilAnimal{
+        margin: 7% 0% 0% 0%;
+    }
+  
+  }

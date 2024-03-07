@@ -1,7 +1,9 @@
 main {
     background-image: url(../../../../assets/backgroundModal.png);
 }
-
+.Phrase-btn{
+  background-image: url(../../../../assets/frontPage.png);
+}
 .imgAdd {
     width: 27%;
     margin: 5% 0%;
@@ -16,7 +18,7 @@ main {
   
   .imgPhoto2{
     margin: 5% 0% 0% 0%;  
-    right: 38%;
+    right: 50%;
     width: 80%;
    
   }
@@ -30,21 +32,17 @@ main {
 
   .imgPhoto4{
     margin: 20% 0% 0% 0%;
-    right: 38%;
+    right: 50%;
     width: 80%;
    
   }
  
 
-  .btnImg1{
-    margin: 28% 0% 2% 0%;
+  .btnImg1,  .btnImg2{
+    margin: 26% 0% 10% 0%;
   }
   
-  .btnImg2{
-    margin: 28% 0% 2% 0%;
-  }
-  
-  
+ 
   .btnImg3, .btnImg4{
     margin: 26% 0% 10% 0%;
   }
@@ -75,6 +73,7 @@ main {
 }
 
 .btn-post{
+    margin-left: 17%;
     border-color: var(--color-primary);
     background-color: var(--color-primary);
     color: var(--color-secondary);
@@ -83,7 +82,7 @@ main {
     border-radius: 40px;
 }
 
-/* Style for Pais and Ciudad */
+/* Style for Country and City */
 .selectSyS, .selectAyP,.selectPyC {
   padding-inline: 0% 10%;
 }
@@ -100,3 +99,19 @@ span.carousel-control-next-icon {
    margin-left: 62%;
 }
 
+
+
+@media screen and (max-width: 600px) {
+  .dataAnimal1, .dataAnimal2 {
+      width: 100%;
+  }
+  
+  .btn-post{
+    margin-left: 15%;
+    height: 45px;
+    width: 50%
+  }
+  
+}
+
+ 
