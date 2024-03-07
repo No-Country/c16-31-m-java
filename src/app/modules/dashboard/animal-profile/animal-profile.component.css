@@ -110,6 +110,10 @@
   grid-area: refuge;
 }
 
+.carousel-heigth{
+  background-color: rgb(176, 176, 176);
+}
+
 
 @media screen and (max-width: 1023px) {
 
@@ -123,6 +127,10 @@
                         "info"
                         "refuge"
                         "chat";
+  }
+
+  .carousel-heigth{
+    height: 94vw;
   }
 }
 
@@ -147,6 +155,10 @@
     margin-inline: 30px;
     padding-inline: 4px;
     width: 95%;
+  }
+
+  .carousel-heigth{
+    height: 33vw;
   }
 }
 
