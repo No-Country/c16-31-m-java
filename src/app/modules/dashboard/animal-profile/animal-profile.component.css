@@ -10,6 +10,7 @@
 }
 
 .information-animal-container{
+  position: relative;
   width: 100%;
   grid-area: info;
 }
@@ -114,6 +115,21 @@
   background-color: rgb(176, 176, 176);
 }
 
+.auth-btn-container{
+  position: absolute;
+  z-index: 1;
+}
+
+.auth-btn-container button{
+  vertical-align: middle;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: none;
+}
+
+.auth-btn-container button span{
+  font-size: 2em;
+}
 
 @media screen and (max-width: 1023px) {
 
@@ -131,6 +147,17 @@
 
   .carousel-heigth{
     height: 94vw;
+  }
+
+  .auth-btn-container{
+    top: 3%;
+    right: 10px;
+  }
+
+  .auth-btn-container button{
+    margin-inline: 0;
+    padding-left: 30px;
+    padding-right: 10px;
   }
 }
 
@@ -159,6 +186,16 @@
 
   .carousel-heigth{
     height: 33vw;
+  }
+
+  .auth-btn-container{
+    top: 7%;
+    right: 20px;
+  }
+
+  .auth-btn-container button{
+    margin-inline: 20px;
+    padding-inline: 5px;
   }
 }
 

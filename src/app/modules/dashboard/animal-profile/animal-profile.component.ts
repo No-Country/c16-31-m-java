@@ -11,6 +11,8 @@ import { PerfilRefugioService } from 'src/app/service/perfil-refugio.service';
 export class AnimalProfileComponent implements OnInit{
 
   idProfileAnimal:string = localStorage.getItem('idFileAnimal') as string;
+  getEmailOnline:string = localStorage.getItem('email') as string;
+  statusBtnsForEdit:boolean = false;
   objProfileAnimal:oneProfileAnimal = {
     age: 0,
     castrated: '',
@@ -73,12 +75,22 @@ export class AnimalProfileComponent implements OnInit{
           species: element.species,
           vaccines: element.vaccines
         }
+
+        this.statusBtnsForEdit = this.verifyAuthPublish(this.getEmailOnline, `${element.emailRefugio}`)
       },
       error: (err) => {
         console.log(err);
       }
   })
+
   }
 
+  verifyAuthPublish(email:string, authPublish:string){
+    if(email === authPublish){
+      return true;
+    }else{
+      return false;
+    }
+  }
 
 }

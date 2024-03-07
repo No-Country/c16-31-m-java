@@ -8,6 +8,8 @@ import { AnimalProfileComponent } from './animal-profile/animal-profile.componen
 import { RefugeProfileComponent } from './components/refuge-profile/refuge-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdoptFormsAnimalRescuedComponent } from './adopt-forms-animal-rescued/adopt-forms-animal-rescued.component';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -15,13 +17,17 @@ import { AdoptFormsAnimalRescuedComponent } from './adopt-forms-animal-rescued/a
     AdoptFormsComponent,
     AnimalProfileComponent,
     RefugeProfileComponent,
-    AdoptFormsAnimalRescuedComponent
+    AdoptFormsAnimalRescuedComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule
   ]
 })
-export class DashboardModule { }
+export class DashboardModule {
+
+
+}
