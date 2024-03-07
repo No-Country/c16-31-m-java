@@ -20,16 +20,16 @@
         <label>Especie</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.species" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
-          <option value="gato">Gato</option>
-          <option value="perro">Perro</option>
+          <option value="Gato">Gato</option>
+          <option value="Perro">Perro</option>
         </select>
       </div>
       <div class="one-filter-container">
         <label>Sexo</label>
-        <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.sex" (change)="applyFilters()">
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.sexo" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
-          <option value="macho">Macho</option>
-          <option value="hembra">Hembra</option>
+          <option value="Macho">Macho</option>
+          <option value="Hembra">Hembra</option>
         </select>
       </div>
       <div class="one-filter-container">
@@ -45,21 +45,22 @@
         <label>Tamaño</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.size" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
-          <option value="pequeño">Pequeño</option>
-          <option value="mediano">Mediano</option>
-          <option value="grande">Grande</option>
+          <option value="Pequeño">Pequeño</option>
+          <option value="Mediano">Mediano</option>
+          <option value="Grande">Grande</option>
         </select>
       </div>
       <div class="one-filter-container">
         <label>País</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.country" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
-          <option value="argentina">Argentina</option>
-          <option value="peru">Perú</option>
-          <option value="chile">Chile</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Peru">Perú</option>
+          <option value="Chile">Chile</option>
+          <option value="Venezuela">Venezuela</option>
         </select>
       </div>
-      <div class="one-filter-container">
+      <!-- <div class="one-filter-container">
         <label>Ciudad</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.city" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
@@ -67,8 +68,8 @@
           <option value="lima">Lima</option>
           <option value="concepcion">Concepción</option>
         </select>
-      </div>
-      <div class="one-filter-container">
+      </div> -->
+      <!-- <div class="one-filter-container">
         <label>Refugio</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="filters.refuge" (change)="applyFilters()">
           <option selected [ngValue]="null">Elige una opción</option>
@@ -76,14 +77,14 @@
           <option value="vozAnimal">Voz animal</option>
           <option value="callejeritos">Callejeritos</option>
         </select>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="all-cards-container">
     <h2>¿Serias mi mami o papi humano?</h2>
     <div class="cards-container">
-      <div class="card" (click)="goToProfileAnimal(one.id)" *ngFor="let one of filteredObjAdopt">
-        <img src="{{one.imageUrl}}" class="card-img-top" alt="{{one.name}}">
+      <div class="card" (click)="goToProfileAnimal(one.idAnimal, one.id)" *ngFor="let one of filteredObjAdopt">
+        <img src="{{one.imgURL1}}" class="card-img-top img-card-adopt" alt="{{one.name}}">
         <div class="card-body">
           <p class="card-text">{{one.name}}</p>
           <div>Click para más información</div>

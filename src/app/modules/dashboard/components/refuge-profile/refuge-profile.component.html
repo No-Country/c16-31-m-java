@@ -1,29 +1,29 @@
 <div class="refuge-pf-container">
-  <img src="../../../../../assets/addImage.jpg" alt="logo del refugio"/>
-  <h4>Nombre del refugio</h4>
-  <p>País - ciudad</p>
+  <img src="{{objProfileRefuge.imgURL}}" alt="logo del refugio"/>
+  <h4>{{objProfileRefuge.name}}</h4>
+  <p>{{objProfileRefuge.country}} - {{objProfileRefuge.city}}</p>
   <ul class="social-red-container">
     <li>
-      <a>
+      <a href="{{objProfileRefuge.linkFacebook}}" target="_blank">
         <i class="bi bi-facebook"></i>
       </a>
     </li>
     <li>
-      <a>
+      <a href="{{objProfileRefuge.linkInstagram}}" target="_blank">
         <i class="bi bi-instagram"></i>
       </a>
     </li>
     <li>
-      <a>
+      <a href="{{objProfileRefuge.linkWhatsApp}}" target="_blank">
         <i class="bi bi-whatsapp"></i>
       </a>
     </li>
     <li>
-      <a>
+      <a href="{{objProfileRefuge.linkPageWeb}}" target="_blank">
         <i class="bi bi-globe"></i>
       </a>
     </li>
   </ul>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <p>Aceptamos donaciones de: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>{{objProfileRefuge.description}}</p>
+  <p>Aceptamos donaciones de: {{objProfileRefuge.donations}}</p>
 </div>

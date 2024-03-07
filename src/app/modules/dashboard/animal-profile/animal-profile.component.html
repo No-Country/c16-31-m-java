@@ -1,4 +1,8 @@
 <div class="p-3 animal-profile-container">
+  <div>
+    <button></button>
+    <button></button>
+  </div>
   <div class="slider-container">
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
@@ -8,17 +12,17 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../../../../assets/animal1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item active carousel-heigth">
+          <img src="{{objProfileAnimal.imgURL1}}" class="d-block w-100" alt="Animal buscando un hogar" style="object-position: center;">
         </div>
-        <div class="carousel-item">
-          <img src="../../../../assets/animal2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item carousel-heigth">
+          <img src="{{objProfileAnimal.imgURL2}}" class="d-block w-100" alt="Animal buscando un hogar" style="object-position: center;">
         </div>
-        <div class="carousel-item">
-          <img src="../../../../assets/animal3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item carousel-heigth">
+          <img src="{{objProfileAnimal.imgURL3}}" class="d-block w-100" alt="Animal buscando un hogar" style="object-position: center;">
         </div>
-        <div class="carousel-item">
-          <img src="../../../../assets/animal2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item carousel-heigth">
+          <img src="{{objProfileAnimal.imgURL4}}" class="d-block w-100" alt="Animal buscando un hogar" style="object-position: center;">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -32,38 +36,38 @@
     </div>
   </div>
   <div class="pt-4 pb-5 information-animal-container">
-    <h2><strong>KITTY</strong></h2>
+    <h2><strong>{{objProfileAnimal.name.toUpperCase()}}</strong></h2>
     <div>
       <strong>Sexo: </strong>
-      <p>Hembra</p>
+      <p>{{objProfileAnimal.sexo}}</p>
     </div>
     <div>
       <strong>Edad: </strong>
-      <p>2 años</p>
+      <p>{{objProfileAnimal.age}} años</p>
     </div>
     <div>
       <strong>Peso: </strong>
-      <p>4 kl</p>
+      <p>{{objProfileAnimal.peso}} kl</p>
     </div>
     <div>
       <strong>Vacunas: </strong>
-      <p>Rabia</p>
+      <p>{{objProfileAnimal.vaccines}}</p>
     </div>
     <div>
       <strong>Castrado(a): </strong>
-      <p>Si</p>
+      <p>{{objProfileAnimal.castrated}}</p>
     </div>
     <div>
-      <strong>Refugio: </strong>
-      <p><a>Entre patas</a></p>
+      <strong>Ciudad: </strong>
+      <p>{{objProfileAnimal.city}}</p>
     </div>
     <div>
       <strong>Descripción: </strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>{{objProfileAnimal.description}}</p>
     </div>
     <div>
       <strong>Su historia: </strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>{{objProfileAnimal.history}}</p>
     </div>
     <div class="btn-profile-adopt">
       <button>Adoptar</button>

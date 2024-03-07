@@ -70,6 +70,12 @@
   font-weight: bolder;
 }
 
+.img-card-adopt{
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .cards-container .card .card-body p{
   text-align: center;
   font-family: var(--font-family-primary);
@@ -202,5 +208,9 @@
 
   .card{
     width: 100%;
+  }
+
+  .bday-decor{
+    display: none;
   }
 }
