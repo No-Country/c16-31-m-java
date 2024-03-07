@@ -80,10 +80,10 @@ export class AdoptFormsAnimalRescuedComponent implements OnInit {
         this.images1 = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          console.log(url);  
+          console.log("Url de la Imagen 1:",url);  
           this.images1.push(url);
         }
-        this.imgAnimal1 = this.images1.slice(0)[0];
+        this.imgAnimal1 = this.images1.slice(1)[0];
       })
 
       .catch(error => console.log(error));   
@@ -113,10 +113,10 @@ export class AdoptFormsAnimalRescuedComponent implements OnInit {
         this.images2 = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          console.log(url);  
+          console.log("Url de la Imagen 2:",url);  
           this.images2.push(url);
         }
-        this.imgAnimal2 = this.images2.slice(0)[0];
+        this.imgAnimal2 = this.images2.slice(1)[0];
       })
 
       .catch(error => console.log(error));  
@@ -146,10 +146,10 @@ export class AdoptFormsAnimalRescuedComponent implements OnInit {
         this.images3 = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          console.log(url);  
+          console.log("Url de la Imagen 3:",url);  
           this.images3.push(url);
         }
-        this.imgAnimal3 = this.images3.slice(0)[0];
+        this.imgAnimal3 = this.images3.slice(1)[0];
       })
 
       .catch(error => console.log(error));  
@@ -179,10 +179,10 @@ export class AdoptFormsAnimalRescuedComponent implements OnInit {
         this.images4 = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          console.log(url);  
+          console.log("Url de la Imagen 4:",url);  
           this.images4.push(url);
         }
-        this.imgAnimal4 = this.images4.slice(0)[0];
+        this.imgAnimal4 = this.images4.slice(1)[0];
       })
 
       .catch(error => console.log(error));  

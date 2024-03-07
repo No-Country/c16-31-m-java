@@ -5,6 +5,7 @@ main {
 }
 
 .frontPage{
+   
     width: 99.9%;
 }
 .text {
@@ -35,7 +36,7 @@ h1.phrase {
 
 /* Statistics */
 .waitingToBeAdopted, .registeredShelters, .registeredUsers {
-    margin-top: 6%;
+    margin-top: 12%;
     margin-left: 16%;
     width: 12%;
 }
@@ -45,12 +46,12 @@ h1.phrase {
     background-color: transparent;
     border-color:transparent;
     max-width: 70%;
-    margin-top: 4%;
+    margin-top: 12%;
     margin-left: 15%;
 }
 
 .card-text {
-    margin-top: 15%;
+    
     margin-left: 12%;
     text-align: center;
     font-family: var(--font-family-primary);
@@ -85,3 +86,43 @@ span.carousel-control-next-icon {
 }
 
 
+
+/* Mobiles Devices */
+@media screen  and (max-width: 769px) {
+    .text { 
+        top: 50%;
+        padding: 5px;
+        font-size: 77%;
+    }
+
+    .btns {
+        font-size: 25px;     
+    }
+  }
+
+  /* Tablets Devices */
+
+  @media screen  and (min-width: 768px) and (max-width: 1023px) {
+    .text { 
+        top: 66%;
+        padding: 5px;
+        font-size: 97%;
+    }
+
+    .btns {
+        font-size: 25px;     
+    }
+  }
+
+ /* Laptop Devices */
+  @media screen  and (min-width: 1024px) and (max-width: 1439px) {
+    .text { 
+        top: 66%;
+        padding: 5px;
+        font-size: 107%;
+    }
+
+    .btns {
+        font-size: 25px;     
+    }
+  }

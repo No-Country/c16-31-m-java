@@ -4,20 +4,20 @@
           <div class="container ">           
             <div class="row">
               <!-- Photho, Descriptions of animal and history -->
-              <div class="col-6">
+              <div class="col-6 dataAnimal1">
                     <!-- Photo of animal -->
                     <div class="container text-center">       
                       <div class="row">
                          <!-- Photo 1 -->
                         <div class="col-6">
                           <img [src]="imgAnimal1"   class="rounded mx-auto d-block imgPhoto1 " alt="...">
-                        
+                          <!-- <img src="../../../../assets/animal1.jpg" class=" rounded mx-auto d-block imgPhoto4" alt="..."> -->
                           <input class="form-control btnImg1" type="file" id="formFile" (change)="uploadImage1($event)" formControlName="image1">
                         </div>
                             <!-- Photo 2 -->
                             <div class="col-6">
                               <img [src]="imgAnimal2"   class="rounded mx-auto d-block imgPhoto2 " alt="...">
-                              
+                              <!-- <img src="../../../../assets/animal1.jpg" class=" rounded mx-auto d-block imgPhoto4" alt="..."> -->
                               <input class="form-control btnImg2" type="file" id="formFile" (change)="uploadImage2($event)" formControlName="image2">
                             </div>
                       </div>
@@ -28,18 +28,18 @@
                          <!-- Photo 3 -->
                         <div class="col-6"> 
                           <img [src]="imgAnimal3"   class="rounded mx-auto d-block imgPhoto3 " alt="...">
-                           
+                          <!-- <img src="../../../../assets/animal1.jpg" class=" rounded mx-auto d-block imgPhoto4" alt="..."> -->
                           <input class="form-control btnImg3" type="file" id="formFile" (change)="uploadImage3($event)" formControlName="image3">
                         </div>
                               <!-- Photo 4 -->
                               <div class="col-6">
                                 <img [src]="imgAnimal4" class=" rounded mx-auto d-block imgPhoto4" alt="...">
-                                
+                                <!-- <img src="../../../../assets/animal1.jpg" class=" rounded mx-auto d-block imgPhoto4" alt="..."> -->
                                 <input class="form-control btnImg4" type="file" id="formFile" (change)="uploadImage4($event)" formControlName="image4">
                               </div>
                       </div>
                     </div>
-                     <br>
+                    
                     <!-- Description of animal -->
                     <div class="mb-3">
                       <label for="exampleFormControlTextarea1" class="form-label">Descripción del rescatadito(a)</label>
@@ -55,14 +55,14 @@
 
 
               <!-- Species, Name, sexo, edad, peso, castrado, vacunas  -->
-              <div class="col-6"> 
+              <div class="col-6 dataAnimal2"> 
 
                   <!-- Species -->
                   <div class="select-container">
                     <label for="exampleFormControlInput1" class="form-label text-center">Especie</label>
                     <select class="form-select form-select-sm " aria-label="Small select example" formControlName="species" >
-                      <option value="perro">Perro</option>
-                      <option value="gato">Gato</option>
+                      <option value="Perro">Perro</option>
+                      <option value="Gato">Gato</option>
                     </select>
                   </div>
                   <br>
@@ -81,9 +81,9 @@
                           <!-- Size -->
                           <label for="exampleFormControlInput1" class="form-label text-center">Tamaño</label>
                           <select class="form-select form-select-sm " aria-label="Small select example" formControlName="size" >
-                            <option value="grande">Grande</option>
-                            <option value="mediano">Mediano</option>
-                            <option value="pequeño">Pequeño</option>
+                            <option value="Grande">Grande</option>
+                            <option value="Mediano">Mediano</option>
+                            <option value="Pequeño">Pequeño</option>
                           </select> 
                         </div>
                       </div>
@@ -92,8 +92,8 @@
                             <!-- Sexo of animal -->
                             <label for="exampleFormControlInput1" class="form-label text-center">Sexo</label>
                             <select class="form-select form-select-sm " aria-label="Small select example" formControlName="sexo" >
-                              <option value="macho">Macho</option>
-                              <option value="hembra">Hembra</option>
+                              <option value="Macho">Macho</option>
+                              <option value="Hembra">Hembra</option>
                             </select>
                         </div>
                       </div>              
@@ -123,8 +123,8 @@
                   <div class="select-container">
                     <label for="exampleFormControlInput1" class="form-label text-center">Castrado(a)</label>
                     <select class="form-select form-select-sm " aria-label="Small select example" formControlName="castrated" >
-                      <option value="si">Si</option>
-                      <option value="no">No</option>
+                      <option value="Si">Si</option>
+                      <option value="No">No</option>
                     </select>
                   </div>
                   <br>
@@ -141,10 +141,10 @@
                           <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" >País</label>
                             <select class="form-select form-select-sm aaa" aria-label="Small select example" formControlName="country">
-                              <option value="argentina">Argentina</option>
-                              <option value="chile">Chile</option>
-                              <option value="peru">Perú</option>
-                              <option value="venezuela">Venezuela</option>
+                              <option value="Argentina">Argentina</option>
+                              <option value="Chile">Chile</option>
+                              <option value="Peru">Perú</option>
+                              <option value="Venezuela">Venezuela</option>
                             </select>
                           </div>
                         </div>
@@ -171,7 +171,7 @@
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4 probando">
                     <div class="col">
                       <div class="card h-100">
                         <img src="../../../../assets/animal1.jpg" class="card-img-top" alt="...">
@@ -200,7 +200,7 @@
                   </div>
               </div>
               <div class="carousel-item">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4 ">
                     <div class="col">
                       <div class="card h-100">
                         <img src="../../../../assets/animal1.jpg" class="card-img-top" alt="...">
