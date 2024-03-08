@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { perfilAnimal } from '../shared/interface/perfilAnimal';
-import { Firestore, addDoc, collection, collectionData, doc, docData } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, doc, docData, deleteDoc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -36,4 +36,13 @@ export class PerfilAnimalsService {
     return docData(profileAnimalRef, { idField: 'id' }) as Observable<any>;
   }
 
+  deleteProfileAnimal(animalId: any) {
+    const oneProfileAnimal = doc(this.firestore, `perfilAnimal/${animalId}`);
+    return deleteDoc(oneProfileAnimal);
+  }
+
+  editProfileAnimal(objAnimal:any, name:string, sexo:string, age:string, peso:string, vaccines:string, castrated:string, city:string, description:string, history:string ) {
+    const oneEditProfileAnimal = doc(this.firestore, `notes/${objAnimal.id}`);
+    return updateDoc(oneEditProfileAnimal, {name:name, sexo:sexo, age:age, peso:peso, vaccines:vaccines, castrated:castrated, city:city, description:description, history:history});
+  }
 }
