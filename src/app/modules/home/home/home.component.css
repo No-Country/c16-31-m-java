@@ -1,38 +1,43 @@
-
-/* Pront Page */
-main {
+.container {
     background-image: url('../../../../assets/backgroundModal.png');
 }
-
-.frontPage{
-   
-    width: 99.9%;
-}
-.text {
+.cover {
+    position: relative;
     color: var(--color-secondary);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
+    height: 500px; 
+    background-image: url('../../../../assets/frontPage.png'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1.phrase {
-    font-size: 200%;
+
+
+.cover h1 {
+    font-size: 36px;
 }
 
-.btns {
+.cover button {
+    margin: 2% 0% 0% 0%;
     background-color: transparent;
     color: var(--color-secondary);
     font-family: var(--font-family-primary);
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 1px;
     border-radius: 40px/50px;
     border-color: var(--font-family-primary);
-    
 }
+
+
+.container:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último contenedor */
+}
+
 
 /* Statistics */
 .waitingToBeAdopted, .registeredShelters, .registeredUsers {
@@ -58,13 +63,6 @@ h1.phrase {
     font-size: 107%;
 }
 
-button.active, .buttonsAdop {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    
-}
-
 /* Activities */
 .titleA{
     text-align: center;
@@ -85,44 +83,29 @@ span.carousel-control-next-icon {
    margin-left: 62%;
 }
 
-
-
-/* Mobiles Devices */
-@media screen  and (max-width: 769px) {
-    .text { 
-        top: 50%;
-        padding: 5px;
-        font-size: 77%;
+@media (max-width: 768px) {
+    .cover .content {
+        padding: 10px; 
+    }
+    
+    .cover h1 {
+        font-size: 18px; 
     }
 
-    .btns {
-        font-size: 25px;     
-    }
-  }
+}
 
-  /* Tablets Devices */
-
-  @media screen  and (min-width: 768px) and (max-width: 1023px) {
-    .text { 
-        top: 66%;
-        padding: 5px;
-        font-size: 97%;
+@media (max-width: 375px) {
+    .carousel-item {
+        flex-direction: column; 
     }
 
-    .btns {
-        font-size: 25px;     
-    }
-  }
-
- /* Laptop Devices */
-  @media screen  and (min-width: 1024px) and (max-width: 1439px) {
-    .text { 
-        top: 66%;
-        padding: 5px;
-        font-size: 107%;
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: block; 
     }
 
-    .btns {
-        font-size: 25px;     
+    .btnAdopt{
+        font-size: 10%;
+        padding: 4%;
     }
-  }
+}
