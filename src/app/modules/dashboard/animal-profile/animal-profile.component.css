@@ -137,7 +137,26 @@
 
 .pair-input-profile{
   display: flex;
-  gap: auto;
+  gap: 7%;
+}
+
+.twoInputs{
+  width: 50%;
+}
+
+.form-select{
+  padding: 6px;
+}
+
+.mb-3 label{
+  color: var(--color-primary);
+  font-weight: bold;
+  font-family: var(--font-family-primary);
+  text-align: center;
+}
+
+.mb-3 input, .mb-3 select, .mb-3 textarea{
+  background-color: rgb(229, 229, 229);
 }
 
 .modal-body p{
