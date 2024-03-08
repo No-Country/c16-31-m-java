@@ -33,12 +33,18 @@
   </div>
   <div class="pt-4 pb-5 information-animal-container">
     <div class="auth-btn-container" *ngIf="statusBtnsForEdit">
-      <button>
+      <button
+        (click)="openModalEdit()"
+        data-bs-toggle="modal"
+        data-bs-target="#myModalEdit">
         <span class="material-symbols-outlined">
           edit_note
         </span>
       </button>
-      <button>
+      <button
+        (click)="openModalDelete()"
+        data-bs-toggle="modal"
+        data-bs-target="#myModalDelete">
         <span class="material-symbols-outlined">
           delete
         </span>
@@ -99,19 +105,82 @@
   </div>
 </div>
 
-<div class="modal fade" tabindex="-1" id="myModal">
+<div class="modal fade" tabindex="-1" id="myModalDelete">
+  <div class="modal-dialog">
+    <div class="modal-content modal-delete">
+      <div class="modal-body">
+        <p>¿Está seguro(a) que desea eliminar esta publicación?</p>
+      </div>
+      <div class="modal-footer modal-footer-btns">
+        <button type="button" class="btn" (click)="deleteProfile()" data-bs-dismiss="modal">Si, eliminar</button>
+        <button type="button" class="btn" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="myModalEdit" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body modal-body-edit p-4">
+        <form [formGroup]="profileAnimalForm">
+          <div class="pair-input-profile">
+            <div class="mb-3">
+              <label for="nameAnimal" class="form-label">Nombre: </label>
+              <input type="text" class="form-control" id="nameAnimal">
+            </div>
+            <div class="mb-3">
+              <div class="select-container">
+                <label for="selectSpecies" class="form-label text-center">Especie: </label>
+                <select class="form-select form-select-sm " aria-label="Small select example" formControlName="species" id="selectSpecies">
+                  <option value="Perro">Perro</option>
+                  <option value="Gato">Gato</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="pair-input-profile">
+            <div class="mb-3">
+              <label for="edadAnimal" class="form-label">Edad: </label>
+              <input type="number" class="form-control" id="edadAnimal">
+            </div>
+            <div class="mb-3">
+              <label for="pesoAnimal" class="form-label">Peso: </label>
+              <input type="number" class="form-control" id="pesoAnimal">
+            </div>
+          </div>
+          <div class="pair-input-profile">
+            <div class="mb-3">
+              <div class="select-container">
+                <label for="selectCastrated" class="form-label text-center">Castrado(a): </label>
+                <select class="form-select form-select-sm " aria-label="Small select example" formControlName="castrated" id="selectCastrated">
+                  <option value="Si">Si</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="cityAnimal" class="form-label">Ciudad: </label>
+              <input type="text" class="form-control" id="cityAnimal">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="vaccineAnimal" class="form-label">Vacunas: </label>
+            <input type="text" class="form-control" id="vaccineAnimal">
+          </div>
+          <div class="mb-3">
+            <label for="descriptionAnimal" class="form-label">Descripción: </label>
+            <textarea class="form-control" id="descriptionAnimal" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="historyAnimal" class="form-label">Historia: </label>
+            <textarea class="form-control" id="historyAnimal" rows="3"></textarea>
+          </div>
+          <div class="modal-footer modal-footer-btns">
+            <button type="button" class="btn" data-bs-dismiss="modal">Actualizar</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

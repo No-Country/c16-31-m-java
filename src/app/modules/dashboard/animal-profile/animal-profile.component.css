@@ -131,6 +131,46 @@
   font-size: 2em;
 }
 
+.modal-delete{
+  margin-top: 20vh;
+}
+
+.pair-input-profile{
+  display: flex;
+  gap: auto;
+}
+
+.modal-body p{
+  text-align: center;
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+}
+
+.modal-footer-btns{
+  justify-content: center;
+  gap: 10%;
+}
+
+.modal-footer-btns button{
+  width: 120px;
+  color: var(--color-tertiary);
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+}
+
+.modal-footer-btns button:nth-child(1){
+  background-color: var(--color-primary);
+  border-radius: 25px;
+  color: var(--color-tertiary)
+}
+
+.modal-footer-btns button:nth-child(2){
+  background-color: var(--color-secondary);
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.254);
+  color: var(--color-tertiary);
+}
+
 @media screen and (max-width: 1023px) {
 
   .refuge-profile-container{

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PerfilAnimalsService } from 'src/app/service/perfil-animals.service';
 import { oneProfileAnimal } from 'src/app/shared/interface/perfilAnimal';
 import { PerfilRefugioService } from 'src/app/service/perfil-refugio.service';
+import { Router } from '@angular/router';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-animal-profile',
@@ -38,12 +41,19 @@ export class AnimalProfileComponent implements OnInit{
     species: '',
     vaccines: ''
   }
+  profileAnimalForm: FormGroup;
+
 
   constructor(
     public perfilAnimalsService: PerfilAnimalsService,
-    public perfilRefugioService: PerfilRefugioService
+    public perfilRefugioService: PerfilRefugioService,
+    private router: Router,
+    private fb: FormBuilder,
     ) {
-
+      this.profileAnimalForm = this.fb.group({
+        email : [''],
+        password : ['']
+      });
   }
 
   ngOnInit(): void {
@@ -91,6 +101,30 @@ export class AnimalProfileComponent implements OnInit{
     }else{
       return false;
     }
+  }
+
+  openModalDelete(){
+    const modelDiv = document.getElementById('myModalDelete')
+    if(modelDiv != null){
+      modelDiv.style.display = 'block';
+    }
+  }
+
+  openModalEdit(){
+    const modelDiv = document.getElementById('myModalEdit')
+    if(modelDiv != null){
+      modelDiv.style.display = 'block';
+    }
+  }
+
+
+  deleteProfile(){
+    this.perfilAnimalsService.deleteProfileAnimal(this.idProfileAnimal)
+    .then(() => {
+      console.log('eliminado')
+      this.router.navigate(['/dashboard']);
+    })
+    .catch((error)=>console.log(error));
   }
 
 }
