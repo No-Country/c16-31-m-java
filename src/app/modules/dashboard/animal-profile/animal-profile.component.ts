@@ -3,7 +3,7 @@ import { PerfilAnimalsService } from 'src/app/service/perfil-animals.service';
 import { oneProfileAnimal } from 'src/app/shared/interface/perfilAnimal';
 import { PerfilRefugioService } from 'src/app/service/perfil-refugio.service';
 import { Router } from '@angular/router';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
