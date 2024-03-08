@@ -1,4 +1,4 @@
-<img src="../c16-31-m-java/src/assets/bannerOficial.jpg"/>
+<img src="bannerOficial.jpg"/>
 
 
 
