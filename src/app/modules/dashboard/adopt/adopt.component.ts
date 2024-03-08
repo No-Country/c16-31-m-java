@@ -101,8 +101,8 @@ export class AdoptComponent implements OnInit{
 
   goToProfileAnimal(Animalid:string, idProfile:string){
     localStorage.setItem('idFileAnimal', idProfile)
-    window.open(`/dashboard/${Animalid}`, '_blank');
-    /* this.router.navigate(['/dashboard', Animalid]); */
+    /* window.open(`/dashboard/${Animalid}`, '_blank'); */
+    this.router.navigate(['/dashboard', Animalid]);
   }
 
   onSearchNameAdopt() {
